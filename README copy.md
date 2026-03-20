@@ -4,3 +4,4 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 Blog de noticias Vue+firebase+firestore+boostrap+html+css+js
 Cambios 
+Se agrega fix para github pages, problema de ruta
