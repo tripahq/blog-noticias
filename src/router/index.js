@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { auth } from '../firebase/config' 
+import { auth } from '../firebase/config'
 
 const routes = [
   { 
@@ -26,12 +26,11 @@ const routes = [
 ]
 
 const router = createRouter({
-  // Se cambia el string fijo por la variable de entorno de Vite
+  // Esto usa el valor de 'base' definido en vite.config.js automáticamente
   history: createWebHistory(import.meta.env.BASE_URL),
   routes
 })
 
-// Guardia de navegación para proteger rutas
 router.beforeEach((to, from, next) => {
   const requiresAuth = to.matched.some(record => record.meta.requiresAuth)
   const isAuthenticated = auth.currentUser
